@@ -1,0 +1,35 @@
+
+
+First, we are going to load in some US crime data again using `crimedata` but this time we are going to specify that we'd like the output data to be an sf class. This means it will include all the information we've been using so far, stored in a traditional rectangular data frame format, but with spatial attributes. In this example, we are just using the data for Chicago in 2017. 
+
+```{r, warning=F, message=F}
+chicago.sf <- get_crime_data(
+          cities = "Chicago", 
+          years = 2017, 
+          type = "core",
+          output = "sf") 
+
+```
+
+Now when we run `class(chicago.sf)` we'll see that this is both a data frame / tibble and an sf object. If you inspect the sf object manually using `View(chicago.shop.sf)` you will see an extra column called `geometry` which contains the lat-long coordinates of each recorded crime. This means you can perform standard data handling and visualisations on this object, as we have been doing in the morning using data frames, such as filter:
+
+```{r}
+chicago.shop.sf <- chicago.sf %>% 
+  filter(offense_type == "shoplifting")
+```
+
+But it also means we can perform spatial functions on the object, such as a basic pinpoint map of these shoplifting locations using ggplot.
+
+```{r}
+ggplot(data = chicago.shop.sf) +
+  geom_sf()
+```
+
+And use aesthetic options just as we have previously.
+
+```{r}
+ggplot(data = chicago.shop.sf, mapping = aes(colour = location_category)) +
+  geom_sf() 
+```
+
+Note that the `chicago.shop.sf` object contains over ten thousand incidents. By running `length(unique(chicago.shop.sf$geometry))` you can see how many unique coordinate pairs there are in the data. Here, there are in fact only 2042 unique coordinate locations. This is largely due to the way in which data is made open to ensure anonymity. You can read more about this [here](https://osf.io/preprints/socarxiv/9y7qz/). For now, this example just serves as a demonstration of how sf objects can be used within the existing functionalities of the tidyverse, including visualisation using ggplot2.

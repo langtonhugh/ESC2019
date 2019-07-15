@@ -1,0 +1,219 @@
+---
+title: "Introducing R and RStudio"
+author: "Space Place and Crime working group"
+date: "September 2019"
+output:
+  ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## What is R?
+
+<center>
+
+"R is a research tool for the analysis and visualisation of data"
+
+</center>
+
+<div style= "position: relative; top: 40px;">
+
+``` {r, echo = F, cache=F, results = 'hide', warning=F, message=F, out.height = "350px", fig.align='center'}
+
+library(tidyverse) ; library(sf) ; library(gridExtra)
+
+den <- ggplot(iris) + 
+  geom_density(aes(Sepal.Length, fill = Species), alpha = 0.6) +
+  theme_void() +
+  theme(legend.position = "none")
+
+bar <- ggplot(mpg) + 
+  geom_bar(aes(class, fill = model), alpha = 0.8) +
+  theme_void() +
+  theme(legend.position = "none")
+
+scat <- ggplot(mpg) +
+  geom_point(aes(displ, hwy, colour = class), size = 3) +
+  theme_void() +
+  theme(legend.position = "none")
+
+map.sf <- st_read("./data/manc_msoa_shp/england_msoa_2011.shp")
+
+map <- ggplot(map.sf) +
+  geom_sf(aes(fill = code), alpha = 0.8) + 
+  theme_void() +
+  theme(legend.position = "none") +
+  coord_sf(datum = NA)
+
+grid.arrange(den, bar, scat, map, ncol = 4)
+```
+
+</div>
+
+## What is RStudio?
+
+```{r, out.width = "800px"} 
+knitr::include_graphics("./img/bttf.png")
+```
+
+<font size = "3">
+
+Source: [Data carpentry](https://datacarpentry.org/r-socialsci/00-intro/index.html)
+
+</font>
+
+## Why use it?
+
+## Why use it: open (free!)
+
+```{r, out.width = "700px", echo=FALSE}
+knitr::include_graphics("./img/open_tools.png")
+```
+
+## Why use it: community
+
+```{r, out.width = "700px", echo=FALSE}
+knitr::include_graphics("./img/rstackos.png")
+```
+
+<!-- ## Why use it: replicability -->
+
+<!-- ```{r, out.width = "600px", echo=FALSE} -->
+<!-- knitr::include_graphics("./img/field_gold_tweet.png") -->
+<!-- ``` -->
+
+## Why use it: versatility
+
+```{r, out.width = "500px", echo=FALSE}
+knitr::include_graphics("./img/original_plot.png")
+```
+
+<font size = "3">
+
+Mapping (pacakge: sf)
+
+</font>
+
+## Why use it: versatility
+
+```{r, out.width = "700px", echo=FALSE}
+knitr::include_graphics("./img/brexit.gif")
+```
+
+<font size = "3">
+
+Online dashboards (package: shiny), gif source: [rcatlord](https://github.com/rcatlord/shinyapps/tree/master/brexit)
+
+</font>
+
+## Why use it: versatility
+
+```{r, out.width = "650px", echo=FALSE}
+knitr::include_graphics("./img/lotr_text.png")
+```
+
+<font size = "3">
+
+Text analysis (package: tidytext), image source: [Jakub Glinka](https://www.r-bloggers.com/sentiment-analysis-of-the-lord-of-the-rings-with-tidytext/)
+
+</font>
+
+## Why use it: versatility
+
+```{r, out.width = "750px", echo=FALSE}
+knitr::include_graphics("./img/aoristic.png")
+```
+
+<font size = "3">
+
+Aoristic analysis (package: aoristic)
+
+</font>
+
+## Why use it: versatility
+
+```{r, out.width = "600px", echo=FALSE}
+knitr::include_graphics("./img/akmedoids.png")
+```
+
+<font size = "3">
+
+Longitudinal clustering (package: akmedoids)
+
+</font>
+
+## Why use it: versatility
+
+```{r, out.height = "485px", out.width = "427px", echo=FALSE}
+knitr::include_graphics("./img/gbtm.png")
+```
+
+<font size = "3">
+
+Longitudinal clustering (package: crimCV), image source: [Andrew Wheeler](https://andrewpwheeler.wordpress.com/2015/09/29/some-plots-to-go-with-group-based-trajectory-models-in-r/)
+
+</font>
+
+## Why use it: versatility
+
+```{r, out.width = "700px", echo=FALSE}
+knitr::include_graphics("./img/spdep.png")
+```
+
+<font size = "3">
+
+Spatial cluster analysis (package: spdep)
+
+</font>
+
+## Why use it: versatility
+
+```{r, out.width = "400px", echo=FALSE}
+knitr::include_graphics("./img/lorenzgini.png")
+```
+
+<font size = "3">
+
+Concentration measures for crime data (package: lorenzgini)
+
+</font>
+
+## Why wouldn't you use it?
+
+<center>
+
+```{r, out.width = "600px", echo=FALSE}
+knitr::include_graphics("./img/learning_curve.png")
+```
+
+</center>
+
+## RStudio interface
+
+Live demo.
+
+## Packages: tidyverse
+
+```{r, out.width = "800px"} 
+knitr::include_graphics("./img/tidyverse.png")
+```
+
+## Packages: crimedata
+
+```{r, out.width = "800px"} 
+knitr::include_graphics("./img/crimedata.png")
+```
+
+## Installing packages
+
+```{r, eval = FALSE, echo = TRUE}
+install.packages('tidyverse')
+```
+
+## Installing packages
+
+```{r, eval = FALSE, echo = TRUE}
+install.packages('crimedata')
+```

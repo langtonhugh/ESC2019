@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/512571/28eccc89057242a38fc5d3ac555aa43e
+bundleId: https://api.rpubs.com/api/v1/document/512571/28eccc89057242a38fc5d3ac555aa43e
+url: http://rpubs.com/spaceplacecrime/512571/edit
+when: 1563122280.98941
