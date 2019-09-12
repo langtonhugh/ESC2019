@@ -344,3 +344,8 @@ manc.sf <- st_as_sf(manc.sp)
 
 - Again, Twitter is a good resource for keeping up-to-date with things. There are many people, but following [Robin Lovelace](https://twitter.com/robinlovelace), [Jakub Nowosad](https://twitter.com/jakub_nowosad), [Angela Li](https://twitter.com/CivicAngela) and [Edzer Pebesma](https://twitter.com/edzerpebesma) will give you a good start.
 
+## Acknowledgements
+
+
+
+

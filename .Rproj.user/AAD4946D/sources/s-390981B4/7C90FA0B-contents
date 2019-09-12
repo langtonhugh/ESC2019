@@ -1,0 +1,66 @@
+---
+title: "Introduction to R for criminologists"
+author: "Space Place and Crime working group"
+date: "September 2019"
+output:
+  ioslides_presentation:
+    css: my_theme.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## About us
+
+- Sam Langton
+- Monsuru Adepeju
+- Mathew Ashby
+- Wouter Steenbeek
+- Christophe Vandeviver
+
+
+```{r, out.width = "800px"} 
+knitr::include_graphics("./img/logos.png")
+```
+
+
+## Day content: morning
+
+**09.30-11.00** 
+  
+- What is R?  
+- RStudio interface  
+- Introducing the _tidyverse_  
+- Importing and handling data  
+
+**11.00-11.15**  
+  
+- Coffee break  
+
+**11.15-12.00**
+  
+- Data visualisation  
+
+## Day content: afternoon
+
+**12.00-13.00**  
+  
+- Lunch  
+
+**13.00-15.00** 
+  
+- Spatial data in R
+- Visualising spatial data
+- Basic geometry operations
+
+## Material
+
+All slides and worksheets are available online
+
+<center>
+<font color = "blue">
+https://rpubs.com/spaceplacecrime
+</font>
+</center>
+
