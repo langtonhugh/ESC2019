@@ -64,3 +64,11 @@ https://rpubs.com/spaceplacecrime
 </font>
 </center>
 
+## Acknowledgements
+
+Partridge, H., Solymosi, R. & Langton, S.H. (2019, July). Getting Started in R: an introduction to data analysis and visualisation (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3349635
+
+Wickham, H., & Grolemund, G. (2016). R for data science: import, tidy, transform, visualize, and model data. " O'Reilly Media, Inc.".
+
+Lovelace, R., Nowosad, J., & Muenchow, J. (2019). Geocomputation with R. CRC Press.
+

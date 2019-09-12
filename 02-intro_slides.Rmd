@@ -1,9 +1,9 @@
 ---
 title: "Introducing R and RStudio"
 author: "Space Place and Crime working group"
-date: "September 2019"
 output:
-  ioslides_presentation
+  ioslides_presentation:
+    css: my_theme.css
 ---
 
 ```{r setup, include=FALSE}
@@ -24,12 +24,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 library(tidyverse) ; library(sf) ; library(gridExtra)
 
-den <- ggplot(iris) + 
+den <- ggplot(iris) +
   geom_density(aes(Sepal.Length, fill = Species), alpha = 0.6) +
   theme_void() +
   theme(legend.position = "none")
 
-bar <- ggplot(mpg) + 
+bar <- ggplot(mpg) +
   geom_bar(aes(class, fill = model), alpha = 0.8) +
   theme_void() +
   theme(legend.position = "none")
@@ -42,7 +42,7 @@ scat <- ggplot(mpg) +
 map.sf <- st_read("./data/manc_msoa_shp/england_msoa_2011.shp")
 
 map <- ggplot(map.sf) +
-  geom_sf(aes(fill = code), alpha = 0.8) + 
+  geom_sf(aes(fill = code), alpha = 0.8) +
   theme_void() +
   theme(legend.position = "none") +
   coord_sf(datum = NA)
@@ -78,11 +78,11 @@ knitr::include_graphics("./img/open_tools.png")
 knitr::include_graphics("./img/rstackos.png")
 ```
 
-<!-- ## Why use it: replicability -->
+## Why use it: replicability
 
-<!-- ```{r, out.width = "600px", echo=FALSE} -->
-<!-- knitr::include_graphics("./img/field_gold_tweet.png") -->
-<!-- ``` -->
+```{r, out.width = "600px", echo=FALSE}
+knitr::include_graphics("./img/field_gold_tweet.png")
+```
 
 ## Why use it: versatility
 
@@ -98,15 +98,7 @@ Mapping (pacakge: sf)
 
 ## Why use it: versatility
 
-```{r, out.width = "700px", echo=FALSE}
-knitr::include_graphics("./img/brexit.gif")
-```
-
-<font size = "3">
-
-Online dashboards (package: shiny), gif source: [rcatlord](https://github.com/rcatlord/shinyapps/tree/master/brexit)
-
-</font>
+[Online dashboards](https://rstudio.github.io/shinydashboard/examples.html) (package: shiny)
 
 ## Why use it: versatility
 
@@ -196,13 +188,13 @@ Live demo.
 
 ## Packages: tidyverse
 
-```{r, out.width = "800px"} 
+```{r, out.width = "800px"}
 knitr::include_graphics("./img/tidyverse.png")
 ```
 
 ## Packages: crimedata
 
-```{r, out.width = "800px"} 
+```{r, out.width = "800px"}
 knitr::include_graphics("./img/crimedata.png")
 ```
 
@@ -217,3 +209,4 @@ install.packages('tidyverse')
 ```{r, eval = FALSE, echo = TRUE}
 install.packages('crimedata')
 ```
+

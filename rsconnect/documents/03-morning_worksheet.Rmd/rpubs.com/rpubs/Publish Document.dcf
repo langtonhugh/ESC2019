@@ -4,7 +4,7 @@ username:
 account: rpubs
 server: rpubs.com
 hostUrl: rpubs.com
-appId: https://api.rpubs.com/api/v1/document/512558/33d5f2abd34743b8afe956b641966aec
-bundleId: https://api.rpubs.com/api/v1/document/512558/33d5f2abd34743b8afe956b641966aec
-url: http://rpubs.com/spaceplacecrime/512558
-when: 1563115515.74467
+appId: https://api.rpubs.com/api/v1/document/520232/34db104f1f33419db78fb901d4adde9d
+bundleId: https://api.rpubs.com/api/v1/document/520232/34db104f1f33419db78fb901d4adde9d
+url: http://rpubs.com/publish/claim/520232/f49a75b516634cfe866b020244ee99b1
+when: 1565939386.78976
