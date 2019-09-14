@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Preamble
 
-This page contains material for _Introducing R for criminologists_, a workshop hosted by the [Space Place and Crime](http://www.space-place-crime.eu/) working group at the European Society of Criminology conference in Ghent, 2019. Accompanying worksheets and slides can be found [here.](https://rpubs.com/spaceplacecrime)
+This page contains material for _Introducing R for criminologists_, a workshop hosted by the [Space Place and Crime](http://www.space-place-crime.eu/) working group at the European Society of Criminology conference in Ghent, 2019. Accompanying worksheets and slides](https://rpubs.com/spaceplacecrime) are available.
 
 ## Introducing R and RStudio
 
@@ -444,7 +444,7 @@ block_counts <- crimes %>%
 
 Take a look at the data now with `View(block_counts)`. We now have a count of the number of crimes for each census block by city.
 
-We can now plot these data to show how concentrated crime is in each city. Here, we make a density plot, but split the plot into [small multiples]() by city using the `facet_wrap()` function. You'll also notice that we also specify the fill as black, but not as an aesthetic. Aesthetics are mapped to variables! Here, we are not mapping `fill` to a variable, just stating that it should be black.
+We can now plot these data to show how concentrated crime is in each city. Here, we make a density plot, but split the plot into [small multiples](https://www.dshkol.com/2017/small-multiples-with-maps/) by city using the `facet_wrap()` function. You'll also notice that we also specify the fill as black, but not as an aesthetic. Aesthetics are mapped to variables! Here, we are not mapping `fill` to a variable, just stating that it should be black.
 
 ```{r}
 ggplot(data = block_counts, mapping = aes(x = crime_counts)) +
@@ -481,6 +481,6 @@ ggsave(filename = "output_files/my_plot.jpeg", plot = p1, device = "jpeg")
 
 1. **R for Data Science** This [free book](https://r4ds.had.co.nz/) gives you a comprehensive introduction to the tidyverse. The material in that book will allow you to do the vast majority of fundamental data tasks in R, including everything we've done in this tutorial. It is available quite cheaply as a paperback too.  
 2. **Google** This is probably your best resource! Queries will often take you to great websites like Stack Overflow, where in 99% of cases, someone has asked exactly the same question you have! To get an answer that uses the tidyverse, follow every Google search with the word 'tidyverse' or the specific package within the tidyverse (e.g. ggplot2) if you know which one it is.   
-3. **Twitter** To broaden your knowledge of R more generally, or to keep up-to-date with the latest developments, Twitter is a great resource. There are few key people, such as [Hadley Wickham](https://twitter.com/hadleywickham?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), [Mara Averick](https://twitter.com/dataandme?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), [Julia Silge](https://twitter.com/juliasilge?lang=en) and [Thomas Lin Pederson](https://twitter.com/thomasp85?lang=en), who are definitely worth following, but there are many others who you will come across. The hashtag [#rstats]() also showcases great graphics and other work people have done with R.
+3. **Twitter** To broaden your knowledge of R more generally, or to keep up-to-date with the latest developments, Twitter is a great resource. There are few key people, such as [Hadley Wickham](https://twitter.com/hadleywickham?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), [Mara Averick](https://twitter.com/dataandme?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor), [Julia Silge](https://twitter.com/juliasilge?lang=en) and [Thomas Lin Pederson](https://twitter.com/thomasp85?lang=en), who are definitely worth following, but there are many others who you will come across. The hashtag [#rstats](https://twitter.com/search?q=%23rstats) also showcases great graphics and other work people have done with R.
 
 <!-- ## Acknowledgements -->
