@@ -187,10 +187,6 @@ knitr::include_graphics("./img/learning_curve.png")
 
 </center>
 
-## RStudio interface
-
-Live demo.
-
 ## Packages: tidyverse
 
 ```{r, out.width = "800px"} 
@@ -202,4 +198,9 @@ knitr::include_graphics("./img/tidyverse.png")
 ```{r, out.width = "800px"} 
 knitr::include_graphics("./img/crimedata.png")
 ```
+
+## RStudio interface
+
+Live demo.
+
 
