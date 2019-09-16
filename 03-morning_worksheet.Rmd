@@ -41,7 +41,7 @@ To start a new project, click on _Project: (None)_ in the top-right corner of th
 
 Complicated projects can end up generating lots of files, which can make your project directory cluttered. It may be helpful to create some directories inside your project directory to help organise your files. You can do this within R by copying the following text into the console and pressing `Enter`.
 
-```{r, eval=FALSE}
+```{r, eval=F}
 dir.create("scripts")       # a directory for the scripts your write
 dir.create("original_data") # a directory for your original, *unchanged* data
 dir.create("output_data")   # a directory for data you have created

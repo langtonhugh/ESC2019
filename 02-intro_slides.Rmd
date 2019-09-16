@@ -3,7 +3,8 @@ title: "Introducing R and RStudio"
 author: "Space Place and Crime working group"
 date: "September 2019"
 output:
-  ioslides_presentation
+  ioslides_presentation:
+    css: my_theme.css
 ---
 
 ```{r setup, include=FALSE}
@@ -78,11 +79,11 @@ knitr::include_graphics("./img/open_tools.png")
 knitr::include_graphics("./img/rstackos.png")
 ```
 
-<!-- ## Why use it: replicability -->
+## Why use it: replicability
 
-<!-- ```{r, out.width = "600px", echo=FALSE} -->
-<!-- knitr::include_graphics("./img/field_gold_tweet.png") -->
-<!-- ``` -->
+```{r, out.width = "600px", echo=FALSE}
+knitr::include_graphics("./img/field_gold_tweet.png")
+```
 
 ## Why use it: versatility
 
@@ -98,13 +99,9 @@ Mapping (pacakge: sf)
 
 ## Why use it: versatility
 
-```{r, out.width = "700px", echo=FALSE}
-knitr::include_graphics("./img/brexit.gif")
-```
-
 <font size = "3">
 
-Online dashboards (package: shiny), gif source: [rcatlord](https://github.com/rcatlord/shinyapps/tree/master/brexit)
+Online dashboards (package: shiny), examples: [RStudio website](https://shiny.rstudio.com/gallery/)
 
 </font>
 
@@ -206,14 +203,3 @@ knitr::include_graphics("./img/tidyverse.png")
 knitr::include_graphics("./img/crimedata.png")
 ```
 
-## Installing packages
-
-```{r, eval = FALSE, echo = TRUE}
-install.packages('tidyverse')
-```
-
-## Installing packages
-
-```{r, eval = FALSE, echo = TRUE}
-install.packages('crimedata')
-```

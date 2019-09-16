@@ -21,7 +21,7 @@ library(sf)
 
 ## Preamble
 
-This page contains material for _Introducing R for criminologists_, a workshop hosted by the [Space Place and Crime](http://www.space-place-crime.eu/) working group at the European Society of Criminology conference in Ghent, 2019. Accompanying [worksheets and slides are available](https://rpubs.com/langton_). For this afternoon session, it assumed you have some background in geography and/or GIS software.
+This page contains material for _Introducing R for criminologists_, a workshop hosted by the [Space Place and Crime](http://www.space-place-crime.eu/) working group at the European Society of Criminology conference in Ghent, 2019. Accompanying [worksheets and slides are available](https://rpubs.com/spaceplacecrime). For this afternoon session, it assumed you have some background in geography and/or GIS software.
 
 ## Spatial data in R
 
