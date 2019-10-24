@@ -23,7 +23,7 @@ As we discussed during the presentation, R is a programming language and open so
 
 Although R is available as a stand-alone piece of software, it is most commonly used through a user-friendly interface _RStudio_. We recommend that you first [download R](https://cran.r-project.org/bin/windows/base/) and then [download RStudio](https://www.rstudio.com/products/rstudio/download/). All the examples in this workshop will be done in _RStudio_. We'll cover (or have covered) the basics of the _RStudio_ interface during live demonstrations, but as a reminder, there are four main windows: the script editor, console, global environment and help/plots.
 
-- **Script editor** This is where you will write and execute your code. Importantly, scripts can be saved, edited, re-used, even sent to other people for their own use. When you view data, it will appear in this window next to your script.
+- **Script editor** This is where you will write and execute your code. Importantly, scripts can be saved, edited, re-used, even sent to other people for their own use. When you view data, it will appear in this window next to your script. You can open a new script by clicking the green/white plus symbol in a white box, on the very top left in RStudio, and selecting 'R Script'.
 - **Console** When you execute code from the script, it will appear in the console. Depending on what you're doing, the output of your code might appear here too, such as the results of some analysis. It's not good practice to type and execute code into the console, because the code is not saved and cannot easily be returned to at a later date. That's why the script is useful!
 - **Global environment** Although this window contains a number of tabs, the most important is the _environment_ (sometimes referred to as your 'workspace'). This will show whatever you happen to be working on, for instance, any data that you've loaded will be shown here, including a brief summary of whatever it is.
 - **Plots/help** Any plots or graphics you create will automatically be shown in the _plots_ tab. You can cycle back through previous plots using the arrows. The _help_ tab contains a number of useful resources, such as links to cheat sheets and introductory manuals. We'll discuss packages a bit later, but the _packages_ tab contains a list of all the packages you've installed, including options to load or update them. You probably won't need the _files_ or _viewer_ tabs for now, but ask away if you're interested!
@@ -459,7 +459,7 @@ The possibilities are nearly endless with ggplot2 but we've introduced you to a 
 
 Just as R is capable of importing numerous different types of data (e.g. .csv, .dta, .sav amongst others), it can also save data in many formats. We will demonstrate how to save the `block_counts` data frame object, used above, as a .csv file using `write_csv()`. We'll need to specify the data frame object we want to save, and the directory where we want to save the file, with the file name at the end. As with reading data, data you save will be saved within your project directory.
 
-```{r, echo = F}
+```{r, echo = T}
 write_csv(block_counts, path = "output_data/block_counts.csv")
 ```
 

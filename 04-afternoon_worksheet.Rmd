@@ -270,13 +270,13 @@ There are more extreme methods of simplifying polygons, such as tiled or hexagon
 To find the centroid of polygons we can use `st_centroid()`.
 
 ```{r, warning = F}
-centroits_sf <- st_centroid(manc_sf) # obtain centroids
+centroids_sf <- st_centroid(manc_sf) # obtain centroids
 ```
 
 And plot them as we have previously.
 
 ```{r}
-ggplot(data = centroits_sf) +
+ggplot(data = centroids_sf) +
   geom_sf()
 ```
 
@@ -285,14 +285,14 @@ ggplot(data = centroits_sf) +
 We can create buffers around these centroid points using `st_buffer()`. For instance, the following will create 500 metre buffers around the centroid locations of each MSOA.
 
 ```{r}
-centroids_buff_sf <- st_buffer(centroits_sf, dist = 500)
+centroids_buff_sf <- st_buffer(centroids_sf, dist = 500)
 ```
 
 Plot to make it clear what we have done.
 
 ```{r}
 ggplot() +
-  geom_sf(data = centroits_sf) +
+  geom_sf(data = centroids_sf) +
   geom_sf(data = centroids_buff_sf, fill = "red", alpha = 0.4) # red and slightly transparent
 ```
 
